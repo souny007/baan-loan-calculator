@@ -2,32 +2,32 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Star, Bank, TrendingUp } from "lucide-react";
+import { ChevronRight, Star, Banknote, TrendingUp } from "lucide-react";
 import { useLoanCalculator } from "@/components/LoanCalculatorContext";
 
-// Mock bank data
+// Update the mockBanks to use Banknote instead of Bank
 const mockBanks = [
   {
     id: 1,
     name: "Baan Finance",
-    logo: <Bank className="h-10 w-10 text-soft-orange" />,
-    interestRateOffset: -0.5, // Lower than user's rate
+    logo: <Banknote className="h-10 w-10 text-soft-orange" />,
+    interestRateOffset: -0.5,
     description: "Quick approval, flexible repayment options",
     features: ["No early repayment fee", "Fast approvals", "Flexible terms"],
   },
   {
     id: 2,
     name: "Laos Credit Union",
-    logo: <Bank className="h-10 w-10 text-sky-blue" />,
-    interestRateOffset: 0, // Same as user's rate
+    logo: <Banknote className="h-10 w-10 text-sky-blue" />,
+    interestRateOffset: 0,
     description: "Trusted by thousands of Laotians",
     features: ["Low fees", "Member benefits", "Personal financial advice"],
   },
   {
     id: 3,
     name: "VIP Bank",
-    logo: <Bank className="h-10 w-10 text-purple-500" />,
-    interestRateOffset: 0.5, // Higher than user's rate
+    logo: <Banknote className="h-10 w-10 text-purple-500" />,
+    interestRateOffset: 0.5,
     description: "Premium banking services with extra benefits",
     features: ["Premium customer service", "Additional insurance options", "Exclusive rewards"],
   },
